@@ -12,11 +12,12 @@ func main() {
 	// Open한 후 작업을 처리하고 정리
 	Open()
 
+	// 정리
+	defer Close()
+
 	// 작업 처리
 	fmt.Println("작업 수행")
 
-	// 정리
-	Close()
 }
 
 func Open() {
